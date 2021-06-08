@@ -3,15 +3,23 @@ package com.example.githubapp.data.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.List;
+
 public class UserGithub implements Parcelable {
     private int id;
-    private String username;
-    private String avatar;
-    private String account;
-
-    public UserGithub() {
-
-    }
+    private String name = "";
+    private String username = "";
+    private String avatar = "";
+    private String account = "";
+    private String link = "";
+    private String email = "";
+    private String location = "";
+    private String bio = "";
+    private String createAt = "";
+    private int followers;
+    private int following;
+    private int repos;
+    private List<UserRepoGithub> listRepos;
 
     public UserGithub(int id, String username, String avatar, String account) {
         this.id = id;
@@ -20,27 +28,16 @@ public class UserGithub implements Parcelable {
         this.account = account;
     }
 
-    protected UserGithub(Parcel in) {
-        id = in.readInt();
-        username = in.readString();
-        avatar = in.readString();
-        account = in.readString();
+    public UserGithub() {
+
     }
-
-    public static final Creator<UserGithub> CREATOR = new Creator<UserGithub>() {
-        @Override
-        public UserGithub createFromParcel(Parcel in) {
-            return new UserGithub(in);
-        }
-
-        @Override
-        public UserGithub[] newArray(int size) {
-            return new UserGithub[size];
-        }
-    };
 
     public int getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getUsername() {
@@ -55,6 +52,74 @@ public class UserGithub implements Parcelable {
         return account;
     }
 
+    public String getLink() {
+        return link;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public String getCreateAt() {
+        return createAt;
+    }
+
+    public int getFollowers() {
+        return followers;
+    }
+
+    public int getFollowing() {
+        return following;
+    }
+
+    public int getRepos() {
+        return repos;
+    }
+
+    public List<UserRepoGithub> getListRepos() {
+        return listRepos;
+    }
+
+    public static Creator<UserGithub> getCREATOR() {
+        return CREATOR;
+    }
+
+    protected UserGithub(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        username = in.readString();
+        avatar = in.readString();
+        account = in.readString();
+        link = in.readString();
+        email = in.readString();
+        location = in.readString();
+        bio = in.readString();
+        createAt = in.readString();
+        followers = in.readInt();
+        following = in.readInt();
+        repos = in.readInt();
+    }
+
+    public static final Creator<UserGithub> CREATOR = new Creator<UserGithub>() {
+        @Override
+        public UserGithub createFromParcel(Parcel in) {
+            return new UserGithub(in);
+        }
+
+        @Override
+        public UserGithub[] newArray(int size) {
+            return new UserGithub[size];
+        }
+    };
+
     @Override
     public int describeContents() {
         return 0;
@@ -63,8 +128,17 @@ public class UserGithub implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(id);
+        parcel.writeString(name);
         parcel.writeString(username);
         parcel.writeString(avatar);
         parcel.writeString(account);
+        parcel.writeString(link);
+        parcel.writeString(email);
+        parcel.writeString(location);
+        parcel.writeString(bio);
+        parcel.writeString(createAt);
+        parcel.writeInt(followers);
+        parcel.writeInt(following);
+        parcel.writeInt(repos);
     }
 }
