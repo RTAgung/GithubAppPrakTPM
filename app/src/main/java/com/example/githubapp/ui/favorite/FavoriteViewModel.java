@@ -9,7 +9,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
 public class FavoriteViewModel extends ViewModel {
-    private AppRepository appRepository;
+    private final AppRepository appRepository;
 
     private String account;
 

@@ -5,7 +5,7 @@ import com.example.githubapp.data.AppRepository;
 import androidx.lifecycle.ViewModel;
 
 public class LoginViewModel extends ViewModel {
-    private AppRepository appRepository;
+    private final AppRepository appRepository;
 
     public int login(String username, String password) {
         return appRepository.login(username, password);

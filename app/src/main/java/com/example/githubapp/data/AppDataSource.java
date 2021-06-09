@@ -2,9 +2,7 @@ package com.example.githubapp.data;
 
 import com.example.githubapp.data.model.UserGithub;
 import com.example.githubapp.data.model.UserReposGithub;
-import com.example.githubapp.data.remote.response.UserResponse;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import androidx.lifecycle.LiveData;

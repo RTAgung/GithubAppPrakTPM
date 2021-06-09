@@ -6,9 +6,7 @@ import com.example.githubapp.data.remote.response.ReposResponse;
 import com.example.githubapp.data.remote.response.SearchResponse;
 import com.example.githubapp.data.remote.response.UserResponse;
 import com.example.githubapp.data.remote.service.ApiConfig;
-import com.example.githubapp.data.remote.service.ApiService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -19,7 +17,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RemoteDataSource {
-    private ApiConfig apiConfig;
+    private final ApiConfig apiConfig;
 
     public LiveData<List<UserResponse>> getUsers() {
         MutableLiveData<List<UserResponse>> users = new MutableLiveData<>();

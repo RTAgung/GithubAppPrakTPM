@@ -1,5 +1,6 @@
 package com.example.githubapp.data.preference;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -7,9 +8,8 @@ public class SessionManager {
     public static final String KEY_LOGIN = "isLogin";
     public static final String KEY_USERNAME = "username";
 
-    private Context context;
-    private SharedPreferences pref = context.getSharedPreferences("Session", Context.MODE_PRIVATE);
-    private SharedPreferences.Editor editor = pref.edit();
+    private final SharedPreferences pref;
+    private final SharedPreferences.Editor editor;
 
     public void createLoginSession() {
         editor.putBoolean(KEY_LOGIN, true)
@@ -33,8 +33,10 @@ public class SessionManager {
         return pref.getString(key, "");
     }
 
+    @SuppressLint("CommitPrefEdits")
     private SessionManager(Context context) {
-        this.context = context;
+        pref = context.getSharedPreferences("Session", Context.MODE_PRIVATE);
+        editor = pref.edit();
     }
 
     private static SessionManager instance;

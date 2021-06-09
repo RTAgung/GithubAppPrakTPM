@@ -4,7 +4,6 @@ import com.example.githubapp.data.remote.response.ReposResponse;
 import com.example.githubapp.data.remote.response.SearchResponse;
 import com.example.githubapp.data.remote.response.UserResponse;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;

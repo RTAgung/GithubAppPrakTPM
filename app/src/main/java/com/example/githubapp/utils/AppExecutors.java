@@ -7,9 +7,9 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class AppExecutors {
-    private Executor diskIO;
-    private Executor networkIO;
-    private Executor mainThread;
+    private final Executor diskIO;
+    private final Executor networkIO;
+    private final Executor mainThread;
 
     private static final int THREAD_COUNT = 3;
 

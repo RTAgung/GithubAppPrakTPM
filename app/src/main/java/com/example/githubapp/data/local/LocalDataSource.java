@@ -8,7 +8,7 @@ import java.util.List;
 import androidx.lifecycle.LiveData;
 
 public class LocalDataSource {
-    private AppDao appDao;
+    private final AppDao appDao;
 
     public LiveData<List<FavoriteEntity>> getFavorites(String account) {
         return appDao.getFavorites(account);

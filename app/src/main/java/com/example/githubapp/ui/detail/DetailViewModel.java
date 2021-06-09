@@ -10,7 +10,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
 public class DetailViewModel extends ViewModel {
-    private AppRepository appRepository;
+    private final AppRepository appRepository;
 
     private String account;
     private String username;

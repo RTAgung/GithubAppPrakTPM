@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 
 import com.example.githubapp.R;
-import com.example.githubapp.ui.login.LoginViewModel;
 import com.example.githubapp.viewmodel.ViewModelFactory;
 
 public class DetailActivity extends AppCompatActivity {

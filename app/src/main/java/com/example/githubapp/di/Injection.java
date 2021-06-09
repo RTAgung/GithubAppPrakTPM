@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.example.githubapp.data.AppRepository;
 import com.example.githubapp.data.local.LocalDataSource;
-import com.example.githubapp.data.local.room.AppDao;
 import com.example.githubapp.data.local.room.AppDatabase;
 import com.example.githubapp.data.preference.SessionManager;
 import com.example.githubapp.data.remote.RemoteDataSource;

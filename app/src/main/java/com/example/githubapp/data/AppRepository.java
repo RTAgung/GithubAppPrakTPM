@@ -9,17 +9,16 @@ import com.example.githubapp.utils.AppExecutors;
 import com.example.githubapp.utils.DataMapper;
 import com.example.githubapp.utils.Helper;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Transformations;
 
 public class AppRepository implements AppDataSource {
-    private SessionManager sessionManager;
-    private LocalDataSource localDataSource;
-    private RemoteDataSource remoteDataSource;
-    private AppExecutors appExecutors;
+    private final SessionManager sessionManager;
+    private final LocalDataSource localDataSource;
+    private final RemoteDataSource remoteDataSource;
+    private final AppExecutors appExecutors;
 
     /*
     ------------------------------------------------------------
@@ -80,16 +79,14 @@ public class AppRepository implements AppDataSource {
 
     @Override
     public void insertFavorite(UserGithub userGithub) {
-        appExecutors.diskIO().execute(() -> {
-            localDataSource.insertFavorite(DataMapper.mapUserGithubToFavoriteEntity(userGithub));
-        });
+        appExecutors.diskIO().execute(() -> localDataSource.insertFavorite(
+                DataMapper.mapUserGithubToFavoriteEntity(userGithub)));
     }
 
     @Override
     public void deleteFavorite(UserGithub userGithub) {
-        appExecutors.diskIO().execute(() -> {
-            localDataSource.deleteFavorite(DataMapper.mapUserGithubToFavoriteEntity(userGithub));
-        });
+        appExecutors.diskIO().execute(() -> localDataSource.deleteFavorite(
+                DataMapper.mapUserGithubToFavoriteEntity(userGithub)));
     }
     /*
     Local Data Function

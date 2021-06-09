@@ -16,7 +16,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
-    private AppRepository appRepository;
+    private final AppRepository appRepository;
 
     @SuppressWarnings("unchecked")
     @NotNull

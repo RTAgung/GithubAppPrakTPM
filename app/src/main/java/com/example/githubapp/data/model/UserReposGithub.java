@@ -1,9 +1,9 @@
 package com.example.githubapp.data.model;
 
 public class UserReposGithub {
-    private String name = "";
-    private String language = "";
-    private String update = "";
+    private final String name;
+    private final String language;
+    private final String update;
 
     public UserReposGithub(String name, String language, String update) {
         this.name = name;
