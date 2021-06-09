@@ -3,11 +3,13 @@ package com.example.githubapp.data.remote;
 import android.util.Log;
 
 import com.example.githubapp.data.remote.response.ReposResponse;
+import com.example.githubapp.data.remote.response.SearchResponse;
 import com.example.githubapp.data.remote.response.UserResponse;
 import com.example.githubapp.data.remote.service.ApiConfig;
 import com.example.githubapp.data.remote.service.ApiService;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import androidx.lifecycle.LiveData;
@@ -19,19 +21,19 @@ import retrofit2.Response;
 public class RemoteDataSource {
     private ApiConfig apiConfig;
 
-    public LiveData<ArrayList<UserResponse>> getUsers() {
-        MutableLiveData<ArrayList<UserResponse>> users = new MutableLiveData<>();
+    public LiveData<List<UserResponse>> getUsers() {
+        MutableLiveData<List<UserResponse>> users = new MutableLiveData<>();
         int random = new Random().nextInt(1000000) + 1;
-        apiConfig.getApiService().getUsers(random).enqueue(new Callback<ArrayList<UserResponse>>() {
+        apiConfig.getApiService().getUsers(random).enqueue(new Callback<List<UserResponse>>() {
             @Override
-            public void onResponse(Call<ArrayList<UserResponse>> call, Response<ArrayList<UserResponse>> response) {
-                ArrayList<UserResponse> data = response.body();
+            public void onResponse(Call<List<UserResponse>> call, Response<List<UserResponse>> response) {
+                List<UserResponse> data = response.body();
                 if (data != null)
                     users.postValue(data);
             }
 
             @Override
-            public void onFailure(Call<ArrayList<UserResponse>> call, Throwable t) {
+            public void onFailure(Call<List<UserResponse>> call, Throwable t) {
                 Log.e("API getUsers()", t.getMessage());
             }
         });
@@ -56,22 +58,41 @@ public class RemoteDataSource {
         return user;
     }
 
-    public LiveData<ArrayList<ReposResponse>> getReposUser(String username) {
-        MutableLiveData<ArrayList<ReposResponse>> repos = new MutableLiveData<>();
-        apiConfig.getApiService().getReposUser(username).enqueue(new Callback<ArrayList<ReposResponse>>() {
+    public LiveData<List<ReposResponse>> getReposUser(String username) {
+        MutableLiveData<List<ReposResponse>> repos = new MutableLiveData<>();
+        apiConfig.getApiService().getReposUser(username).enqueue(new Callback<List<ReposResponse>>() {
             @Override
-            public void onResponse(Call<ArrayList<ReposResponse>> call, Response<ArrayList<ReposResponse>> response) {
-                ArrayList<ReposResponse> data = response.body();
+            public void onResponse(Call<List<ReposResponse>> call, Response<List<ReposResponse>> response) {
+                List<ReposResponse> data = response.body();
                 if (data != null)
                     repos.postValue(data);
             }
 
             @Override
-            public void onFailure(Call<ArrayList<ReposResponse>> call, Throwable t) {
+            public void onFailure(Call<List<ReposResponse>> call, Throwable t) {
                 Log.e("API getReposUser()", t.getMessage());
             }
         });
         return repos;
+    }
+
+    public LiveData<List<UserResponse>> getSearchUser(String username) {
+        MutableLiveData<List<UserResponse>> users = new MutableLiveData<>();
+        apiConfig.getApiService().getSearchUser(username).enqueue(new Callback<SearchResponse>() {
+            @Override
+            public void onResponse(Call<SearchResponse> call, Response<SearchResponse> response) {
+                SearchResponse data = response.body();
+                if (data != null) {
+                    users.postValue(data.getItems());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SearchResponse> call, Throwable t) {
+                Log.e("API getSearchUser()", t.getMessage());
+            }
+        });
+        return users;
     }
 
     public RemoteDataSource(ApiConfig apiConfig) {

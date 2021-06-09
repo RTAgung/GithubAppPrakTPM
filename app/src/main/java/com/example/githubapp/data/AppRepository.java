@@ -2,12 +2,14 @@ package com.example.githubapp.data;
 
 import com.example.githubapp.data.local.LocalDataSource;
 import com.example.githubapp.data.model.UserGithub;
+import com.example.githubapp.data.model.UserReposGithub;
 import com.example.githubapp.data.preference.SessionManager;
 import com.example.githubapp.data.remote.RemoteDataSource;
 import com.example.githubapp.utils.AppExecutors;
 import com.example.githubapp.utils.DataMapper;
 import com.example.githubapp.utils.Helper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.lifecycle.LiveData;
@@ -18,6 +20,46 @@ public class AppRepository implements AppDataSource {
     private LocalDataSource localDataSource;
     private RemoteDataSource remoteDataSource;
     private AppExecutors appExecutors;
+
+    /*
+    ------------------------------------------------------------
+    Remote Data Function
+    */
+    @Override
+    public LiveData<List<UserGithub>> getUsers() {
+        return Transformations.map(
+                remoteDataSource.getUsers(),
+                DataMapper::mapListUserResponseToUserGithub
+        );
+    }
+
+    @Override
+    public LiveData<UserGithub> getDetailUser(String username) {
+        return Transformations.map(
+                remoteDataSource.getDetailUser(username),
+                DataMapper::mapUserResponseToUserGithub
+        );
+    }
+
+    @Override
+    public LiveData<List<UserReposGithub>> getReposUser(String username) {
+        return Transformations.map(
+                remoteDataSource.getReposUser(username),
+                DataMapper::mapListReposResponseToUserReposGithub
+        );
+    }
+
+    @Override
+    public LiveData<List<UserGithub>> getSearchUser(String username) {
+        return Transformations.map(
+                remoteDataSource.getSearchUser(username),
+                DataMapper::mapListUserResponseToUserGithub
+        );
+    }
+    /*
+    Remote Data Function
+    ------------------------------------------------------------
+    */
 
     /*
     ------------------------------------------------------------

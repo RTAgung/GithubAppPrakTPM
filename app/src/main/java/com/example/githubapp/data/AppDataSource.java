@@ -1,12 +1,31 @@
 package com.example.githubapp.data;
 
 import com.example.githubapp.data.model.UserGithub;
+import com.example.githubapp.data.model.UserReposGithub;
+import com.example.githubapp.data.remote.response.UserResponse;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.lifecycle.LiveData;
 
 public interface AppDataSource {
+
+    /*
+    ------------------------------------------------------------
+    Remote Data Function
+    */
+    LiveData<List<UserGithub>> getUsers();
+
+    LiveData<UserGithub> getDetailUser(String username);
+
+    LiveData<List<UserReposGithub>> getReposUser(String username);
+
+    LiveData<List<UserGithub>> getSearchUser(String username);
+    /*
+    Remote Data Function
+    ------------------------------------------------------------
+    */
 
     /*
     ------------------------------------------------------------

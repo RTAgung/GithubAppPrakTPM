@@ -5,6 +5,7 @@ import android.content.Context;
 import com.example.githubapp.data.AppRepository;
 import com.example.githubapp.di.Injection;
 import com.example.githubapp.ui.detail.DetailViewModel;
+import com.example.githubapp.ui.favorite.FavoriteViewModel;
 import com.example.githubapp.ui.login.LoginViewModel;
 import com.example.githubapp.ui.main.MainViewModel;
 
@@ -27,6 +28,8 @@ public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
             return (T) new MainViewModel(appRepository);
         else if (modelClass.isAssignableFrom(DetailViewModel.class))
             return (T) new DetailViewModel(appRepository);
+        else if (modelClass.isAssignableFrom(FavoriteViewModel.class))
+            return (T) new FavoriteViewModel(appRepository);
 
         throw new IllegalArgumentException("Unknown ViewModel class: " + modelClass.getName());
     }

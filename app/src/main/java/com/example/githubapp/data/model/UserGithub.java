@@ -19,13 +19,43 @@ public class UserGithub implements Parcelable {
     private int followers;
     private int following;
     private int repos;
-    private List<UserRepoGithub> listRepos;
+    private List<UserReposGithub> listRepos;
+
+    public UserGithub(String username, String avatar, String account) {
+        this.username = username;
+        this.avatar = avatar;
+        this.account = account;
+    }
 
     public UserGithub(int id, String username, String avatar, String account) {
         this.id = id;
         this.username = username;
         this.avatar = avatar;
         this.account = account;
+    }
+
+    public UserGithub(String name,
+                      String username,
+                      String avatar,
+                      String link,
+                      String email,
+                      String location,
+                      String bio,
+                      String createAt,
+                      int followers,
+                      int following,
+                      int repos) {
+        this.name = name;
+        this.username = username;
+        this.avatar = avatar;
+        this.link = link;
+        this.email = email;
+        this.location = location;
+        this.bio = bio;
+        this.createAt = createAt;
+        this.followers = followers;
+        this.following = following;
+        this.repos = repos;
     }
 
     public UserGithub() {
@@ -84,7 +114,7 @@ public class UserGithub implements Parcelable {
         return repos;
     }
 
-    public List<UserRepoGithub> getListRepos() {
+    public List<UserReposGithub> getListRepos() {
         return listRepos;
     }
 
