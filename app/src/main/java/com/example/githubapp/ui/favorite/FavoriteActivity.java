@@ -17,6 +17,8 @@ public class FavoriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         ViewModelFactory factory = ViewModelFactory.getInstance(this);
         viewModel = new ViewModelProvider(this, factory).get(FavoriteViewModel.class);
 

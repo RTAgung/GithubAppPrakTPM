@@ -20,6 +20,8 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         ViewModelFactory factory = ViewModelFactory.getInstance(this);
         viewModel = new ViewModelProvider(this, factory).get(DetailViewModel.class);
 
