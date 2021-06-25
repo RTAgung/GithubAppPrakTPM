@@ -1,291 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.main.ProfileFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
-        android:id="@+id/profile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="20dp"
-        android:background="@drawable/back">
+        android:layout_height="match_parent"
+        tools:context=".ui.main.ProfileFragment">
 
-        <RelativeLayout
-            android:id="@+id/profile_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/circl_background">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="8dp"
-                android:background="@drawable/circle"
-                android:padding="3dp"
-                android:src="@mipmap/ye" />
-
-</RelativeLayout>
-
-        <TextView
-            android:id="@+id/profile_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_image"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:text="Bang Yedam"
-            android:textSize="30sp"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/profile_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_name"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
-            android:text="yedamie"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:id="@+id/profile_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_username"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="15dp"
-            android:text="yedamietreasure@gmail.com"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:id="@+id/profile_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_email"
-            android:layout_marginTop="6dp"
-            android:layout_marginStart="15dp"
-            android:text="2010-10-20"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:id="@+id/profile_state"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_date"
-            android:layout_marginTop="6dp"
-            android:layout_marginStart="15dp"
-            android:text="South Korea"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:id="@+id/profile_bio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/profile_state"
-            android:layout_marginTop="6dp"
-            android:layout_marginStart="15dp"
-            android:text="yedamie imut harus pinter ga tau mau isi apa yang penting panjang ya :))"
-            android:textSize="20sp"
-            android:textColor="@color/black"/>
-
-        <Button
-            android:id="@+id/btn_browser"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="300dp"
-            android:text="Github"
-            android:textAllCaps="false"
-            android:backgroundTint="@color/black_300"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-             />
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/follow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profile"
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:id="@+id/et_follow"
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:id="@+id/follow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/back">
+            android:layout_below="@id/profile"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginStart="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/followers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Followers"
-                    android:textSize="20dp"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/followers_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="200K"
-                    android:textSize="25dp"
-                    android:textColor="@color/black" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/et_following"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/back">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/following"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Following"
-                    android:textSize="20dp"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/following_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="250K"
-                    android:textSize="25dp"
-                    android:textColor="@color/black" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/et_repos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/back">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/repos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Repositories"
-                    android:textSize="20dp"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/repos_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="20"
-                    android:textSize="25dp"
-                    android:textColor="@color/black" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/profile_repositories"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/follow"
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:id="@+id/dmenu_repos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_weight="1">
-            <TextView
-                android:id="@+id/dtx_repos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Repositories"
-                android:layout_marginStart="15dp"
-                android:textSize="20dp"
-                android:textColor="@color/black"/>
-
-            <LinearLayout
+            <RelativeLayout
+                android:id="@+id/et_follow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/dtx_repos"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/back"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
 
-                <TextView
-                    android:id="@+id/det_nama"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="10dp"
-                    android:text="nama repos"
-                    android:textSize="20sp" />
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/det_bahasa"
+                    <TextView
+                        android:id="@+id/followers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Followers"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/followers_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200K"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/et_following"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/back"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:text="bahasa repos"
-                    android:textSize="20sp"/>
-            </LinearLayout>
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/following"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Following"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/following_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="250K"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/et_repos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/back"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/repos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Repositories"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/repos_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_repositories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/follow"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/dmenu_repos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/dtx_repos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Repositories"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_repo_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dtx_repos"
+                    tools:listitem="@layout/repo_list" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/btn_browser"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/black_300"
+                android:text="Github"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/profile_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/circl_background">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_avatar"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/circle"
+                    android:padding="3dp"
+                    android:src="@mipmap/ye" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/profile_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_name"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:text="yedamie"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_username"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="yedamietreasure@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/profile_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_email"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="6dp"
+                android:text="2010-10-20"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/profile_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_date"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="6dp"
+                android:text="South Korea"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/profile_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_state"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="6dp"
+                android:text="yedamie imut harus pinter ga tau mau isi apa yang penting panjang ya :))"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Bang Yedam"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
 
         </RelativeLayout>
-    </LinearLayout>
     </RelativeLayout>
 
 
-
+</androidx.core.widget.NestedScrollView>
