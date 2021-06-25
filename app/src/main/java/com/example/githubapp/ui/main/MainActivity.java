@@ -10,10 +10,15 @@ import android.view.MenuItem;
 
 import com.example.githubapp.R;
 import com.example.githubapp.viewmodel.ViewModelFactory;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
     private MainViewModel viewModel;
+
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,17 @@ public class MainActivity extends AppCompatActivity {
         ViewModelFactory factory = ViewModelFactory.getInstance(this);
         viewModel = new ViewModelProvider(this, factory).get(MainViewModel.class);
 
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.menu_home:
+                    break;
+                case R.id.menu_profile:
+                    break;
+            }
+            return false;
+        });
     }
 
     @Override
