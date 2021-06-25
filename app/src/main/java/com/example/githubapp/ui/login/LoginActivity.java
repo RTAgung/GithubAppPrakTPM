@@ -26,6 +26,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().setTitle("Login");
+
         ViewModelFactory factory = ViewModelFactory.getInstance(this);
         viewModel = new ViewModelProvider(this, factory).get(LoginViewModel.class);
 

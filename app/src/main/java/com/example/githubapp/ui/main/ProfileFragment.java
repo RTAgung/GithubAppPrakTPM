@@ -54,4 +54,11 @@ public class ProfileFragment extends Fragment {
             userReposGithubList = userReposGithubs;
         });
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((MainActivity) getActivity())
+                .setTitle("Profile");
+    }
 }

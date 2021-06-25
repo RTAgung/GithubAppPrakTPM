@@ -47,6 +47,13 @@ public class HomeFragment extends Fragment {
         observeAll();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((MainActivity) getActivity())
+                .setTitle("Home");
+    }
+
     private void observeAll() {
         viewModel.getUsers().observe(getViewLifecycleOwner(), userGithubs -> {
             userGithubList = userGithubs;

@@ -15,6 +15,7 @@ import com.example.githubapp.ui.detail.DetailActivity;
 import org.jetbrains.annotations.NotNull;
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -22,7 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListViewHolder> {
 
-    private List<UserGithub> githubList;
+    private List<UserGithub> githubList = new ArrayList<>();
 
     public void setData(List<UserGithub> githubList) {
         this.githubList.clear();
