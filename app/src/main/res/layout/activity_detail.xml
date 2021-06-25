@@ -8,14 +8,14 @@
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
-        android:id="@+id/profile"
+        android:id="@+id/detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="20dp"
         android:background="@drawable/back">
 
         <RelativeLayout
-            android:id="@+id/profile_image"
+            android:id="@+id/detail_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
@@ -33,10 +33,10 @@
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/profile_name"
+            android:id="@+id/detail_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_image"
+            android:layout_below="@id/detail_image"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:text="Bang Yedam"
@@ -44,10 +44,10 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/profile_username"
+            android:id="@+id/detail_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_name"
+            android:layout_below="@id/detail_name"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:text="yedamie"
@@ -55,10 +55,10 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/profile_email"
+            android:id="@+id/detail_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_username"
+            android:layout_below="@id/detail_username"
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:text="yedamietreasure@gmail.com"
@@ -66,10 +66,10 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/profile_date"
+            android:id="@+id/detail_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_email"
+            android:layout_below="@id/detail_email"
             android:layout_marginTop="6dp"
             android:layout_marginStart="15dp"
             android:text="2010-10-20"
@@ -77,10 +77,10 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/profile_state"
+            android:id="@+id/detail_state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_date"
+            android:layout_below="@id/detail_date"
             android:layout_marginTop="6dp"
             android:layout_marginStart="15dp"
             android:text="South Korea"
@@ -88,10 +88,10 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/profile_bio"
+            android:id="@+id/detail_bio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_state"
+            android:layout_below="@id/detail_state"
             android:layout_marginTop="6dp"
             android:layout_marginStart="15dp"
             android:text="yedamie imut harus pinter ga tau mau isi apa yang penting panjang ya :))"
@@ -99,7 +99,7 @@
             android:textColor="@color/black"/>
 
         <Button
-            android:id="@+id/btn_browser"
+            android:id="@+id/det_browser"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="15dp"
@@ -114,14 +114,14 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/follow"
+        android:id="@+id/det_follows"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/profile"
+        android:layout_below="@id/detail"
         android:orientation="horizontal">
 
         <RelativeLayout
-            android:id="@+id/et_follow"
+            android:id="@+id/det_follow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -138,7 +138,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/followers"
+                    android:id="@+id/det_followers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Followers"
@@ -146,7 +146,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/followers_number"
+                    android:id="@+id/dfollowers_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="200K"
@@ -158,7 +158,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/et_following"
+            android:id="@+id/det_followings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -175,7 +175,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/following"
+                    android:id="@+id/det_following"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Following"
@@ -183,7 +183,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/following_number"
+                    android:id="@+id/dfollowing_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="250K"
@@ -195,7 +195,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/et_repos"
+            android:id="@+id/det_reposs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -211,7 +211,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/repos"
+                    android:id="@+id/det_repos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -220,7 +220,7 @@
                     android:textColor="@color/black" />
 
                 <TextView
-                    android:id="@+id/repos_number"
+                    android:id="@+id/drepos_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="20"
@@ -233,14 +233,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/repositories"
+        android:id="@+id/det_repositories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/follow"
+        android:layout_below="@id/det_follows"
         android:orientation="horizontal">
 
         <RelativeLayout
-            android:id="@+id/menu_repos"
+            android:id="@+id/dmenu_repos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -248,7 +248,7 @@
             android:paddingBottom="5dp"
             android:layout_weight="1">
             <TextView
-                android:id="@+id/tx_repos"
+                android:id="@+id/dtx_repos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Repositories"
@@ -256,7 +256,37 @@
                 android:textSize="20dp"
                 android:textColor="@color/black"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dtx_repos"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/black_300"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/det_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="nama repos"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/det_bahasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="bahasa repos"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
         </RelativeLayout>
+
+
     </LinearLayout>
 </RelativeLayout>
 

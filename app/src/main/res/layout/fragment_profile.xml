@@ -233,28 +233,55 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/repositories"
+        android:id="@+id/profile_repositories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/follow"
         android:orientation="horizontal">
 
         <RelativeLayout
-            android:id="@+id/menu_repos"
+            android:id="@+id/dmenu_repos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:layout_weight="1">
-    <TextView
-        android:id="@+id/tx_repos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Repositories"
-        android:layout_marginStart="15dp"
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/dtx_repos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repositories"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dtx_repos"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/det_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="nama repos"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/det_bahasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="bahasa repos"
+                    android:textSize="20sp"/>
+            </LinearLayout>
 
         </RelativeLayout>
     </LinearLayout>
