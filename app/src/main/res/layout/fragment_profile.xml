@@ -18,6 +18,7 @@
             android:id="@+id/profile_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/circl_background">
 
@@ -27,8 +28,7 @@
                 android:layout_margin="8dp"
                 android:background="@drawable/circle"
                 android:padding="3dp"
-                android:src="@mipmap/ye"
-                />
+                android:src="@mipmap/ye" />
 
 </RelativeLayout>
 
@@ -97,6 +97,20 @@
             android:text="yedamie imut harus pinter ga tau mau isi apa yang penting panjang ya :))"
             android:textSize="20sp"
             android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btn_browser"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="300dp"
+            android:text="Github"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/black_300"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+             />
+
     </RelativeLayout>
 
     <LinearLayout
