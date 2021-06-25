@@ -52,4 +52,10 @@ public class HomeFragment extends Fragment {
             userGithubList = userGithubs;
         });
     }
+
+    private void observeSearch(String query) {
+        viewModel.getSearchUser(query).observe(getViewLifecycleOwner(), userGithubs -> {
+            userGithubList = userGithubs;
+        });
+    }
 }

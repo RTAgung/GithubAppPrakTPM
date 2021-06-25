@@ -9,6 +9,8 @@ import android.os.Bundle;
 import com.example.githubapp.R;
 import com.example.githubapp.viewmodel.ViewModelFactory;
 
+import java.util.Objects;
+
 public class DetailActivity extends AppCompatActivity {
 
     private DetailViewModel viewModel;
@@ -20,7 +22,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         ViewModelFactory factory = ViewModelFactory.getInstance(this);
         viewModel = new ViewModelProvider(this, factory).get(DetailViewModel.class);
