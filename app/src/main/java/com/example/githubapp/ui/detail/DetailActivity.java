@@ -13,6 +13,8 @@ import java.util.Objects;
 
 public class DetailActivity extends AppCompatActivity {
 
+    public static final String EXTRA_DATA_PARCEL = "extra_data_parcel";
+
     private DetailViewModel viewModel;
 
     private boolean isFavorite = false;

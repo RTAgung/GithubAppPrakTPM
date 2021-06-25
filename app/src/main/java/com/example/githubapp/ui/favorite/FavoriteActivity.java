@@ -2,6 +2,7 @@ package com.example.githubapp.ui.favorite;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -14,6 +15,8 @@ public class FavoriteActivity extends AppCompatActivity {
 
     private FavoriteViewModel viewModel;
 
+    private RecyclerView rvUserList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,8 @@ public class FavoriteActivity extends AppCompatActivity {
 
         ViewModelFactory factory = ViewModelFactory.getInstance(this);
         viewModel = new ViewModelProvider(this, factory).get(FavoriteViewModel.class);
+
+        rvUserList = findViewById(R.id.rv_user_list);
 
     }
 }

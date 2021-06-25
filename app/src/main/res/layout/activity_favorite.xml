@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="10dp"
-    android:layout_marginStart="10dp"
-    android:layout_marginEnd="10dp"
-    android:padding="20dp">
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/profil"
-        android:layout_width="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_user_list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/a_background" />
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/aa"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10sp"
-        android:layout_marginStart="20sp"/>
-</androidx.appcompat.widget.LinearLayoutCompat>
+        tools:listitem="@layout/user_list" />
+</LinearLayout>
