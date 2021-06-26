@@ -2,17 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginEnd="10dp"
     android:layout_marginStart="10dp"
     android:layout_marginTop="10dp"
+    android:background="@color/black_50"
     android:orientation="horizontal"
-    android:padding="20dp">
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/iv_profil"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/a_background" />
+        android:src="@color/black_100" />
 
     <TextView
         android:id="@+id/tv_username"
@@ -20,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="@string/aa"
+        tools:text="Username"
         android:textSize="24sp"
         android:textStyle="bold" />
 </LinearLayout>

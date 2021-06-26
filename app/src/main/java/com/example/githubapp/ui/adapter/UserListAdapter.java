@@ -23,7 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListViewHolder> {
 
-    private List<UserGithub> githubList = new ArrayList<>();
+    private final List<UserGithub> githubList = new ArrayList<>();
 
     public void setData(List<UserGithub> githubList) {
         this.githubList.clear();
@@ -49,8 +49,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ListVi
     }
 
     public class ListViewHolder extends RecyclerView.ViewHolder {
-        private ImageView ivProfile;
-        private TextView tvUsername;
+        private final ImageView ivProfile;
+        private final TextView tvUsername;
 
         public ListViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);

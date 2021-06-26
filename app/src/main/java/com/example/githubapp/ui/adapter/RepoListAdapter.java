@@ -18,7 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RepoListAdapter extends RecyclerView.Adapter<RepoListAdapter.ViewHolder> {
-    private List<UserReposGithub> reposList = new ArrayList<>();
+    private final List<UserReposGithub> reposList = new ArrayList<>();
 
     public void setData(List<UserReposGithub> githubList) {
         this.reposList.clear();
@@ -44,7 +44,9 @@ public class RepoListAdapter extends RecyclerView.Adapter<RepoListAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvName, tvLang, tvUpdate;
+        private final TextView tvName;
+        private final TextView tvLang;
+        private final TextView tvUpdate;
 
         public ViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);

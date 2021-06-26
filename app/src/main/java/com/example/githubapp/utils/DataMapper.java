@@ -6,7 +6,10 @@ import com.example.githubapp.data.model.UserReposGithub;
 import com.example.githubapp.data.remote.response.ReposResponse;
 import com.example.githubapp.data.remote.response.UserResponse;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class DataMapper {
@@ -47,6 +50,8 @@ public class DataMapper {
     }
 
     public static UserGithub mapUserResponseToUserGithub(UserResponse userResponse) {
+        String createAt = userResponse.getCreatedAt();
+        String subCreateAt = (createAt == null) ? createAt : createAt.substring(0, 10);
         return new UserGithub(
                 userResponse.getName(),
                 userResponse.getLogin(),
@@ -55,7 +60,7 @@ public class DataMapper {
                 userResponse.getEmail(),
                 userResponse.getLocation(),
                 userResponse.getBio(),
-                userResponse.getCreatedAt(),
+                subCreateAt,
                 userResponse.getFollowers(),
                 userResponse.getFollowing(),
                 userResponse.getPublicRepos()
@@ -75,7 +80,7 @@ public class DataMapper {
         return new UserReposGithub(
                 reposResponse.getName(),
                 reposResponse.getLanguage(),
-                reposResponse.getUpdatedAt()
+                reposResponse.getUpdatedAt().substring(0, 10)
         );
     }
 }
