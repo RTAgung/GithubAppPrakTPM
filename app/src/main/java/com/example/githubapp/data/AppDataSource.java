@@ -31,7 +31,7 @@ public interface AppDataSource {
     */
     LiveData<List<UserGithub>> getFavorites(String account);
 
-    LiveData<Integer> checkFavorite(String username, String account);
+    Boolean checkFavorite(String username, String account);
 
     void insertFavorite(UserGithub userGithub);
 

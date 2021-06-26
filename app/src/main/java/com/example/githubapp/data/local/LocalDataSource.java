@@ -14,7 +14,7 @@ public class LocalDataSource {
         return appDao.getFavorites(account);
     }
 
-    public LiveData<Integer> checkFavorite(String username, String account) {
+    public Boolean checkFavorite(String username, String account) {
         return appDao.checkFavorite(username, account);
     }
 
@@ -23,7 +23,7 @@ public class LocalDataSource {
     }
 
     public void deleteFavorite(FavoriteEntity favoriteEntity) {
-        appDao.deleteFavorite(favoriteEntity);
+        appDao.deleteFavorite(favoriteEntity.getAccount(), favoriteEntity.getUsername(), favoriteEntity.getAvatar());
     }
 
     private LocalDataSource(AppDao appDao) {

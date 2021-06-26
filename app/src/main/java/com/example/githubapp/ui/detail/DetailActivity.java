@@ -3,7 +3,6 @@ package com.example.githubapp.ui.detail;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,12 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.githubapp.R;
@@ -73,6 +72,8 @@ public class DetailActivity extends AppCompatActivity {
         UserGithub intentData = getIntent().getParcelableExtra(EXTRA_DATA_PARCEL);
         viewModel.setInitData(intentData);
 
+        isFavorite = viewModel.checkFavorite();
+
         adapter = new RepoListAdapter();
         rvRepoList.setLayoutManager(new LinearLayoutManager(this));
         rvRepoList.setAdapter(adapter);
@@ -80,13 +81,6 @@ public class DetailActivity extends AppCompatActivity {
         viewModel.getDetailUser().observe(this, this::populateProfile);
 
         viewModel.getReposUser().observe(this, this::populateRepo);
-
-        viewModel.checkFavorite().observe(this, favorite -> {
-            if (favorite != null) {
-                isFavorite = favorite == 1;
-                new Handler().postDelayed(this::changeFavoriteView, 250);
-            }
-        });
     }
 
     @Override
@@ -104,16 +98,22 @@ public class DetailActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.menu_favorite:
-                clickFavorite();
+                onClickFavorite();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void clickFavorite() {
-        if (!isFavorite)
+    private void onClickFavorite() {
+        if (!isFavorite) {
             viewModel.insertFavorite();
-        else
+            isFavorite = true;
+            Toast.makeText(this, "insert to favorite", Toast.LENGTH_LONG).show();
+        } else {
             viewModel.deleteFavorite();
+            isFavorite = false;
+            Toast.makeText(this, "remove from favorite", Toast.LENGTH_LONG).show();
+        }
+        changeFavoriteView();
     }
 
     private void populateRepo(List<UserReposGithub> repos) {

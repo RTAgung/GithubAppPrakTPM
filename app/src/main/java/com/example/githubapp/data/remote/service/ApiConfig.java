@@ -10,12 +10,16 @@ public class ApiConfig {
 
     public ApiService getApiService() {
         if (retrofit == null) {
-            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-            interceptor.level(HttpLoggingInterceptor.Level.BODY);
+//            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+//            interceptor.level(HttpLoggingInterceptor.Level.BODY);
+//
+//            OkHttpClient client = new OkHttpClient
+//                    .Builder()
+//                    .addInterceptor(interceptor)
+//                    .build();
 
             OkHttpClient client = new OkHttpClient
                     .Builder()
-                    .addInterceptor(interceptor)
                     .build();
 
             retrofit = new Retrofit.Builder()

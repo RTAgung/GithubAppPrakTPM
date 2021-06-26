@@ -73,7 +73,7 @@ public class AppRepository implements AppDataSource {
     }
 
     @Override
-    public LiveData<Integer> checkFavorite(String username, String account) {
+    public Boolean checkFavorite(String username, String account) {
         return localDataSource.checkFavorite(username, account);
     }
 

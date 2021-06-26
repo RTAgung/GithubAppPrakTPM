@@ -16,12 +16,15 @@ public interface AppDao {
     @Query("SELECT * FROM favorite WHERE account = :account")
     LiveData<List<FavoriteEntity>> getFavorites(String account);
 
-    @Query("SELECT 1 FROM favorite WHERE username = :username AND account = :account")
-    LiveData<Integer> checkFavorite(String username, String account);
+    @Query("SELECT EXISTS (SELECT * FROM favorite WHERE username = :username AND account = :account)")
+    Boolean checkFavorite(String username, String account);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertFavorite(FavoriteEntity favoriteEntity);
 
-    @Delete
-    void deleteFavorite(FavoriteEntity favoriteEntity);
+    @Query("DELETE FROM favorite WHERE account = :account AND username = :username AND avatar = :avatar")
+    void deleteFavorite(String account, String username, String avatar);
+
+//    @Delete
+//    void deleteFavorite(FavoriteEntity favoriteEntity);
 }

@@ -32,7 +32,7 @@ public class DetailViewModel extends ViewModel {
         return username;
     }
 
-    public LiveData<Integer> checkFavorite() {
+    public Boolean checkFavorite() {
         return appRepository.checkFavorite(getUsername(), getSessionUsername());
     }
 

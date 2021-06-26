@@ -6,9 +6,7 @@ import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "favorite",
-        indices = {@Index(value = {"username"},
-                unique = true)})
+@Entity(tableName = "favorite")
 public class FavoriteEntity {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
