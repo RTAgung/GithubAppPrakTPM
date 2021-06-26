@@ -39,14 +39,14 @@
                         android:layout_height="wrap_content"
                         android:text="Followers"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <TextView
                         android:id="@+id/dfollowers_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         tools:text="200" />
 
                 </LinearLayout>
@@ -76,14 +76,14 @@
                         android:layout_height="wrap_content"
                         android:text="Following"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <TextView
                         android:id="@+id/dfollowing_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         tools:text="250" />
 
                 </LinearLayout>
@@ -113,14 +113,14 @@
                         android:layout_gravity="center"
                         android:text="Repositories"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
 
                     <TextView
                         android:id="@+id/drepos_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         tools:text="20" />
 
                 </LinearLayout>
@@ -151,7 +151,7 @@
                     android:layout_marginStart="15dp"
                     android:text="Repositories"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="15dp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_repo_list"
@@ -175,14 +175,14 @@
             <Button
                 android:id="@+id/det_browser"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="38dp"
                 android:layout_marginStart="300dp"
                 android:layout_marginTop="15dp"
                 android:backgroundTint="@color/black_300"
                 android:text="Github"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="10sp" />
 
             <RelativeLayout
                 android:id="@+id/detail_image"
@@ -211,7 +211,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="13sp"
                 tools:text="Username" />
 
             <TextView
@@ -222,7 +222,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="13sp"
                 tools:text="email@gmail.com" />
 
             <TextView
@@ -233,7 +233,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="6dp"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="13sp"
                 tools:text="2010-10-20" />
 
             <TextView
@@ -244,7 +244,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="6dp"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="13sp"
                 tools:text="South Korea" />
 
             <TextView
@@ -255,7 +255,7 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="6dp"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="13sp"
                 tools:text="Bio" />
 
             <TextView
@@ -266,7 +266,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 tools:text="Name" />
 
         </RelativeLayout>
