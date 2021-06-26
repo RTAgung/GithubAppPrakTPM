@@ -1,5 +1,6 @@
 package com.example.githubapp.ui.favorite;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.example.githubapp.R;
 import com.example.githubapp.data.model.UserGithub;
@@ -43,5 +45,15 @@ public class FavoriteActivity extends AppCompatActivity {
 
         rvUserList.setLayoutManager(new LinearLayoutManager(this));
         rvUserList.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
