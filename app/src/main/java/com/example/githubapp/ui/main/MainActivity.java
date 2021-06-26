@@ -16,8 +16,6 @@ import com.example.githubapp.ui.login.LoginActivity;
 import com.example.githubapp.viewmodel.ViewModelFactory;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import org.jetbrains.annotations.NotNull;
-
 public class MainActivity extends AppCompatActivity {
 
     private MainViewModel viewModel;

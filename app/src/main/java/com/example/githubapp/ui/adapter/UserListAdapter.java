@@ -13,7 +13,6 @@ import com.example.githubapp.data.model.UserGithub;
 import com.example.githubapp.ui.detail.DetailActivity;
 
 import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;

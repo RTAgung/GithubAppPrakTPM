@@ -6,10 +6,7 @@ import com.example.githubapp.data.model.UserReposGithub;
 import com.example.githubapp.data.remote.response.ReposResponse;
 import com.example.githubapp.data.remote.response.UserResponse;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class DataMapper {

@@ -2,7 +2,6 @@ package com.example.githubapp.ui.favorite;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,11 +10,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.githubapp.R;
-import com.example.githubapp.data.model.UserGithub;
 import com.example.githubapp.ui.adapter.UserListAdapter;
 import com.example.githubapp.viewmodel.ViewModelFactory;
 
-import java.util.List;
 import java.util.Objects;
 
 public class FavoriteActivity extends AppCompatActivity {

@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.githubapp.R;
-import com.example.githubapp.data.model.UserGithub;
 import com.example.githubapp.data.model.UserReposGithub;
 
 import org.jetbrains.annotations.NotNull;

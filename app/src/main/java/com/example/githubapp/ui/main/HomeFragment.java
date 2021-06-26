@@ -5,12 +5,10 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -18,14 +16,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.githubapp.R;
-import com.example.githubapp.data.model.UserGithub;
 import com.example.githubapp.ui.adapter.UserGridAdapter;
 import com.example.githubapp.viewmodel.ViewModelFactory;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
 
 
 public class HomeFragment extends Fragment {
